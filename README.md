@@ -143,9 +143,9 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 ## 👨‍💻 Author
 
 **MD EJAZUDDIN JAMADAR**
-- Portfolio: [Your Portfolio URL]
-- LinkedIn: [Your LinkedIn]
-- GitHub: [Your GitHub]
+- Portfolio: https://port2-eight-sooty.vercel.app
+- LinkedIn: https://www.linkedin.com/in/md-eajazuddin-jamadar-359810258/
+- GitHub: https://github.com/ajazjamadar
 - Email: liveajaz121@gmail.com
 
 ---
