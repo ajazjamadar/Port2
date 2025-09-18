@@ -44,7 +44,6 @@ const Projects = ({ darkMode }) => {
       image: "/Screenshot 2025-09-02 180114.png",
       technologies: ["MongoDB", "Express.js", "React", "Node.js", "OWASP", "SEO Analysis", "WCAG", "Automated Testing"],
       githubUrl: "https://github.com/ajazjamadar/AuditX",
-      liveUrl: "https://audit-x.vercel.app/",
       features: [
         "Security vulnerability scanning using OWASP standards",
         "Performance analysis and optimization suggestions",
@@ -64,7 +63,6 @@ const Projects = ({ darkMode }) => {
       image: "/Screenshot 2025-09-03 201842.png",
       technologies: ["Python", "Pandas", "Scikit-learn", "Random Forest", "Logistic Regression", "Decision Tree", "Data Cleaning", "Feature Engineering"],
       githubUrl: "https://github.com/md-ejazuddin-jamadar/employee-stress-analysis",
-      liveUrl: "",
       features: [
         "Data cleaning and preprocessing pipeline",
         "Feature engineering for stress indicators",
