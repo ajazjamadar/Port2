@@ -76,7 +76,7 @@ const Projects = ({ darkMode }) => {
       ]
     },
     {
-      id: 4,
+      id: 3,
       title: "Stock Price Prediction Dashboard",
       category: "fullstack",
       description: "Modern interactive web application predicting stock prices using ML models with elegant dark theme, glass morphism effects, and real-time visualizations.",
@@ -84,7 +84,7 @@ const Projects = ({ darkMode }) => {
       image: "/Screenshot 2025-09-03 183538.png",
       technologies: ["Dash", "Plotly", "Python", "TensorFlow", "LSTM", "MLP", "Pandas", "NumPy", "Scikit-learn", "Flask", "Glass Morphism"],
       githubUrl: "https://github.com/ajazjamadar/stocks",
-      liveUrl: "http://localhost:8080",
+      liveUrl: "",
       features: [
         "Multi-page navigation with dedicated analysis sections",
         "Professional dark theme with glass morphism effects",
@@ -103,15 +103,15 @@ const Projects = ({ darkMode }) => {
       ]
     },
     {
-      id: 5,
-      title: "ClimaX – The Climax of Accurate Weather",
+      id: 4,
+      title: "Advanced Weather App (ClimaX)",
       category: "frontend",
       description: "Modern, responsive weather web application providing real-time weather data for any location worldwide with clean, interactive interface and dynamic weather icons.",
       longDescription: "Developed ClimaX, a comprehensive weather application that delivers real-time weather information through seamless API integration with OpenWeatherMap. The application features a clean, minimalistic interface with dynamic weather icons that change based on current conditions. Built with responsive design principles, the app provides instant weather updates including temperature, humidity, wind speed, and atmospheric conditions for any global location through an intuitive search functionality.",
       image: "/Screenshot 2025-09-03 184055.png",
       technologies: ["HTML", "CSS", "JavaScript", "OpenWeatherMap API", "Responsive Design", "REST API", "JSON", "DOM Manipulation"],
       githubUrl: "https://github.com/ajazjamadar/climax-weather",
-      liveUrl: "https://climax-weather.netlify.app",
+      liveUrl: "https://advanced-weather-app-seven.vercel.app/",
       features: [
         "Real-time weather data with current temperature, humidity, and wind speed",
         "Global city search functionality for instant weather updates",
@@ -135,7 +135,7 @@ const Projects = ({ darkMode }) => {
     { id: 'all', name: 'All Projects' },
     { id: 'frontend', name: 'Frontend' },
     { id: 'fullstack', name: 'MERN Stack' },
-    { id: 'dataanalysis', name: 'UI/UX Design' }
+    { id: 'dataanalysis', name: 'Python' }
   ];
 
   const filteredProjects = filter === 'all' 
@@ -212,14 +212,16 @@ const Projects = ({ darkMode }) => {
                         >
                           <FiGithub />
                         </a>
-                        <a 
-                          href={project.liveUrl} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="project-link"
-                        >
-                          <FiExternalLink />
-                        </a>
+                        {project.liveUrl && (
+                          <a 
+                            href={project.liveUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="project-link"
+                          >
+                            <FiExternalLink />
+                          </a>
+                        )}
                       </div>
                     </div>
                     
@@ -235,14 +237,21 @@ const Projects = ({ darkMode }) => {
                     </div>
                     
                     <div className="project-actions">
-                      <a 
-                        href={project.liveUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="btn-project-view glass-button"
-                      >
-                        <FiExternalLink /> View Project
-                      </a>
+                      {project.liveUrl && (
+                        <a 
+                          href={project.liveUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="btn-project-view glass-button"
+                        >
+                          <FiExternalLink /> View Project
+                        </a>
+                      )}
+                      {!project.liveUrl && (
+                        <span className="btn-project-view glass-button disabled">
+                          <FiGithub /> Code Only
+                        </span>
+                      )}
                     </div>
                   </div>
                 </motion.div>
@@ -312,14 +321,16 @@ const Projects = ({ darkMode }) => {
                   >
                     <FiGithub /> View Code
                   </a>
-                  <a 
-                    href={selectedProject.liveUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="btn-primary"
-                  >
-                    <FiExternalLink /> Live Demo
-                  </a>
+                  {selectedProject.liveUrl && (
+                    <a 
+                      href={selectedProject.liveUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn-primary"
+                    >
+                      <FiExternalLink /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>
