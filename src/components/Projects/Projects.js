@@ -64,7 +64,7 @@ const Projects = ({ darkMode }) => {
       image: "/Screenshot 2025-09-03 201842.png",
       technologies: ["Python", "Pandas", "Scikit-learn", "Random Forest", "Logistic Regression", "Decision Tree", "Data Cleaning", "Feature Engineering"],
       githubUrl: "https://github.com/md-ejazuddin-jamadar/employee-stress-analysis",
-      liveUrl: "https://employee-stress-analysis.streamlit.app",
+      liveUrl: "",
       features: [
         "Data cleaning and preprocessing pipeline",
         "Feature engineering for stress indicators",
